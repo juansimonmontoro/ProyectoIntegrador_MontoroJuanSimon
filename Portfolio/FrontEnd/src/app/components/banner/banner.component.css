@@ -3,8 +3,11 @@ img {
     display: block;
     margin: auto;
     height: 170px;
+    padding-top: 10px;
+  
 }
 
 div#divBanner {
     background-color: #e1ecee;
+ 
 }
