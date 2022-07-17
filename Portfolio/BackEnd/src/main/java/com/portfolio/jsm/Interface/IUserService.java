@@ -15,6 +15,6 @@ public interface IUserService {
     public void deleteUser(long id);
 
     //Buscar persona por id
-    public User finUser(Long id);
+    public User findUser(Long id);
 
 }

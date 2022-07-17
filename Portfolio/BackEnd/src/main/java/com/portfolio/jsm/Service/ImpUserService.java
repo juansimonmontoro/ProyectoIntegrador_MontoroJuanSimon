@@ -31,7 +31,7 @@ public class ImpUserService implements IUserService {
     }
 
     @Override
-    public User finUser(Long id) {
+    public User findUser(Long id) {
         User user = iUserRepository.findById(id).orElse(null);
          return user;
     }

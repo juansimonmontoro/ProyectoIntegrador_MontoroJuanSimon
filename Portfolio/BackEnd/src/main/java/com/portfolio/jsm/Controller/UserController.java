@@ -4,6 +4,7 @@ import com.portfolio.jsm.Entity.User;
 import com.portfolio.jsm.Interface.IUserService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
 
     @Autowired
@@ -31,7 +33,7 @@ public class UserController {
     }
 
     @DeleteMapping("/users/borrar/{id}")
-    public String deleUser(@PathVariable Long id) {
+    public String deleteUser(@PathVariable Long id) {
         iuserService.deleteUser(id);
         return "El usuario se elimino correctamente";
     }
@@ -41,7 +43,7 @@ public class UserController {
                          @RequestParam("nombre") String NuevoNombre,
                          @RequestParam("apellido") String NuevoApellido,
                          @RequestParam("img") String NuevaImg) {
-        User user = iuserService.finUser(id);
+        User user = iuserService.findUser(id);
 
         user.setNombre(NuevoNombre);
         user.setApellido(NuevoApellido);
@@ -49,6 +51,11 @@ public class UserController {
 
         iuserService.saveUser(user);
         return user;
+    }
+    
+    @GetMapping("/users/traer/perfil")
+    public User findUser(){
+        return iuserService.findUser((long)3);
     }
 
 }
