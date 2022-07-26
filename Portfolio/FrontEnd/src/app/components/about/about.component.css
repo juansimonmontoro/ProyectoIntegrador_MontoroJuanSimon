@@ -29,11 +29,11 @@ div {
 @media(max-width: 575px){
     #fotoperfil{
         position: absolute;
-        width: 15%;
+        width: 30%;
         border-radius: 100%;
         box-shadow: 3px 3px 3px grey;
-        left: 3%;
-        top: 80px;
+        left: 33%;
+        top: 230px;
     }
 }
  

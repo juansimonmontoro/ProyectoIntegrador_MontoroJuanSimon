@@ -1,4 +1,4 @@
-export class user {
+export class persona {
     id?: number;
     nombre: String;
     apellido: String;
