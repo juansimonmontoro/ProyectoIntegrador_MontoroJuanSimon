@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { interceptorProvider } from './service/interceptor-service';
 
 
 
@@ -46,7 +47,9 @@ import { LoginComponent } from './components/login/login.component';
     HttpClientModule,
 
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
