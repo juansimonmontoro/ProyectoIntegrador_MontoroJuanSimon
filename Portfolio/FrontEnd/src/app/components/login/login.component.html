@@ -3,7 +3,8 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-md-4">
                 <h1>Portfolio Web</h1>
-                <p id="texto">Show your work on the internet with a digital portfolio, exemplify your qualities, training and
+                <p id="texto">Show your work on the internet with a digital portfolio, exemplify your qualities,
+                    training and
                     experience. With this resource, you can attract the attention of job recruiters, obtain new job
                     opportunities and reinforce your professional credibility. </p>
 
@@ -65,4 +66,13 @@
         </div>
     </div>
 </section>
+
+<div>
+<form class="custom-form" method="post">
+
+    <input type="email" [(ngModel)]="nombreUsuario" name="email" placeholder="Email" required="required" />
+    <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required="required" />
+
+</form>
+</div>
 <app-footer></app-footer>
