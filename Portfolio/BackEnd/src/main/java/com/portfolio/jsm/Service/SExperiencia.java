@@ -8,12 +8,14 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 @Service
 @Transactional
 public class SExperiencia {
 
     @Autowired
     RExperiencia rExperiencia;
+
 
     public List<Experiencia> list() {
         return rExperiencia.findAll();
@@ -40,8 +42,30 @@ public class SExperiencia {
         return rExperiencia.existsById(id);
     }
 
-    public boolean existsBynombreE(String nombreE) {
+    public boolean existsByNombreE(String nombreE) {
         return rExperiencia.existsByNombreE(nombreE);
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,6 +17,7 @@ public class dtoExperiencia {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
+
 //Geters y Seters    
 
     public String getNombreE() {
@@ -34,6 +35,23 @@ public class dtoExperiencia {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
-    
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

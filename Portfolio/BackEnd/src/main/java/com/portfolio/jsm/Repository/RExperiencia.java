@@ -13,3 +13,7 @@ public interface RExperiencia extends JpaRepository<Experiencia, Integer> {
     public boolean existsByNombreE(String nombreE);
 
 }
+
+
+
+
