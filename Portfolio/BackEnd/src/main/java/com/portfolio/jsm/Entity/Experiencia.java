@@ -11,7 +11,7 @@ public class Experiencia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String nombreE;
+    public String nombreE;
     private String descripcionE;
 
     //Constructores

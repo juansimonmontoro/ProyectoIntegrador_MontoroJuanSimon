@@ -8,7 +8,6 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
 @Service
 @Transactional
 public class SExperiencia {
@@ -16,14 +15,12 @@ public class SExperiencia {
     @Autowired
     RExperiencia rExperiencia;
 
-
     public List<Experiencia> list() {
         return rExperiencia.findAll();
     }
 
     public Optional<Experiencia> getOne(int id) {
         return rExperiencia.findById(id);
-
     }
 
     public Optional<Experiencia> getByNombreE(String nombreE) {
@@ -45,27 +42,4 @@ public class SExperiencia {
     public boolean existsByNombreE(String nombreE) {
         return rExperiencia.existsByNombreE(nombreE);
     }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -18,6 +18,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experencie/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experencie/edit-experiencia.component';
+
 
 
 
@@ -39,6 +41,8 @@ import { NewExperienciaComponent } from './components/experencie/new-experiencia
     HomeComponent,
     LoginComponent,
     NewExperienciaComponent,
+    EditExperienciaComponent,
+
 
 
   ],
