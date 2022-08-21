@@ -11,9 +11,14 @@
                         <div>
                             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                                 <div class="form-group">
-                                    <label for="nombreP">Nombre y descripcion del Proyecto</label>
+                                    <label for="nombreP">Nombre</label>
                                     <input type="text" class="form-control" id="nombreP" name="nombreP"
-                                        [(ngModel)]="nombreP" required required placeholder="Nombre y descripcion del proyecto">
+                                        [(ngModel)]="nombreP" required required placeholder="Nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label for="descripcionP">Descripcion</label>
+                                    <input type="text" class="form-control" id="descripcionP" name="descripcionP"
+                                        [(ngModel)]="descripcionP" required required placeholder="Descripcion">
                                 </div>
                                 <div class="form-group">
                                     <label for="imgP">Imagen del proyecto</label>

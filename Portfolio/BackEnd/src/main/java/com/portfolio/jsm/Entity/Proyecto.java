@@ -11,19 +11,20 @@ public class Proyecto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     public String nombreP;
+    public String descripcionP;
     private String imgP;
 
     //Constructores
     public Proyecto() {
     }
 
-    public Proyecto(String nombreP, String imgP) {
+    public Proyecto(String nombreP, String descripcionP, String imgP) {
         this.nombreP = nombreP;
+        this.descripcionP = descripcionP;
         this.imgP = imgP;
     }
     
     //Getters and setters
-
     public int getId() {
         return id;
     }
@@ -40,15 +41,21 @@ public class Proyecto {
         this.nombreP = nombreP;
     }
 
+    public String getDescripcionP() {
+        return descripcionP;
+    }
+
+    public void setDescripcionP(String descripcionP) {
+        this.descripcionP = descripcionP;
+    }   
+
     public String getImgP() {
         return imgP;
     }
 
     public void setImgP(String imgP) {
         this.imgP = imgP;
-    }
-    
-  
+    }  
     
     
 }
