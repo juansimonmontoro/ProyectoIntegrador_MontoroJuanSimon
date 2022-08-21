@@ -16,7 +16,7 @@
                             <h6>{{Experiencia.nombreE}}</h6>
                         </td>
                         
-                        <td> <img src={{Experiencia.descripcionE}} alt=""></td>
+                        <td> {{Experiencia.descripcionE}} </td>
 
                         <td *ngIf="isLogged">
                             <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
