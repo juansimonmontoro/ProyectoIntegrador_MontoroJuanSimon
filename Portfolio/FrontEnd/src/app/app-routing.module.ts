@@ -4,6 +4,8 @@ import { EditEducacionComponent } from './components/education/edit-educacion.co
 import { NewEducacionComponent } from './components/education/new-educacion.component';
 import { EditExperienciaComponent } from './components/experencie/edit-experiencia.component';
 import { NewExperienciaComponent } from './components/experencie/new-experiencia.component';
+import { EditHardSoftSkillsComponent } from './components/hard-and-soft-skills/edit-hard-soft-skills.component';
+import { NewHardSoftSkillsComponent } from './components/hard-and-soft-skills/new-hard-soft-skills.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditProyectoComponent } from './components/project/edit-proyecto.component';
@@ -17,7 +19,9 @@ const routes: Routes = [
   { path: 'nuevaedu', component: NewEducacionComponent },
   { path: 'editedu/:id', component: EditEducacionComponent },
   { path: 'nuevoproyecto', component: NewProyectoComponent },
-  { path: 'editproyecto/:id', component: EditProyectoComponent }
+  { path: 'editproyecto/:id', component: EditProyectoComponent },
+  { path: 'nuevohardsoftskills', component: NewHardSoftSkillsComponent },
+  { path: 'edithardsoftskills/:id', component: EditHardSoftSkillsComponent }
 ];
 
 @NgModule({

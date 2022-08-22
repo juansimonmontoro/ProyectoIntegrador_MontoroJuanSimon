@@ -1,124 +1,79 @@
 <!-- <div class=" text-center col-sm-4 col-md-4 col-lg-4"> -->
 <div class="row">
     <h1>Hard & Soft Skills</h1>
-  <!--   <div class="col-lg-1"></div> -->        
-    <div class=" text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress         
-            [percent]="20" 
-            [showUnits]="false"
-            [radius]="100"
-            [imageSrc]="'../assets/image/html.png'"
-            [showImage]="true"
-            [imageHeight]="90"
-            [imageWidth]="90"        
-            [outerStrokeWidth]="16" 
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'" 
-            [innerStrokeColor]="'#C7E596'" 
-            [animation]="true" 
-            [animationDuration]="300">
-        </circle-progress>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">     
+        <button type="button" class="btn btn-primary" routerLink="/nuevohardsoftskills" *ngIf="isLogged">
+            Nueva habilidad
+        </button>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress         
-            [percent]="95" 
-            [showUnits]="false"
-            [radius]="100"
-            [imageSrc]="'../assets/image/css.png'"
-            [showImage]="true"
-            [imageHeight]="90"
-            [imageWidth]="90"         
-            [outerStrokeWidth]="16" 
+    <br>
+    <br>
+    <div class=" text-center col-lg-2 col-sm-4 col-md-4 " *ngFor="let HardSoftSkills of hss">
+       <!--  <h6>{{HardSoftSkills.nombreHSS}}</h6> -->
+        <circle-progress 
+            [percent]=(HardSoftSkills.porcentajeHSS) 
+            [showUnits]="false" 
+            [radius]="80" 
+            [imageSrc]=(HardSoftSkills.imgHSS)
+            [showImage]="true" 
+            [imageHeight]="80" 
+            [imageWidth]="80" 
+            [outerStrokeWidth]="5" 
             [innerStrokeWidth]="8"
             [outerStrokeColor]="'#78C000'" 
             [innerStrokeColor]="'#C7E596'" 
             [animation]="true" 
             [animationDuration]="300">
         </circle-progress>
-    </div> 
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress         
-            [percent]="20" 
-            [showUnits]="false"
-            [radius]="100"
-            [imageSrc]="'../assets/image/js.png'"
-            [showImage]="true"
-            [imageHeight]="90"
-            [imageWidth]="90"         
-            [outerStrokeWidth]="16" 
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'" 
-            [innerStrokeColor]="'#C7E596'" 
-            [animation]="true" 
-            [animationDuration]="300">
-        </circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress         
-            [percent]="20" 
-            [showUnits]="false"
-            [radius]="100"
-            [imageSrc]="'../assets/image/github.png'"
-            [showImage]="true"
-            [imageHeight]="90"
-            [imageWidth]="90"         
-            [outerStrokeWidth]="16" 
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'" 
-            [innerStrokeColor]="'#C7E596'" 
-            [animation]="true" 
-            [animationDuration]="300">
-        </circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress         
-            [percent]="20" 
-            [showUnits]="false"
-            [radius]="100"
-            [imageSrc]="'../assets/image/python.png'"
-            [showImage]="true"
-            [imageHeight]="90"
-            [imageWidth]="90"         
-            [outerStrokeWidth]="16" 
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'" 
-            [innerStrokeColor]="'#C7E596'" 
-            [animation]="true" 
-            [animationDuration]="300">
-        </circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress         
-            [percent]="20" 
-            [showUnits]="false"
-            [radius]="100"
-            [imageSrc]="'../assets/image/ingles.png'"
-            [showImage]="true"
-            [imageHeight]="90"
-            [imageWidth]="90"         
-            [outerStrokeWidth]="16" 
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'" 
-            [innerStrokeColor]="'#C7E596'" 
-            [animation]="true" 
-            [animationDuration]="300">
-        </circle-progress>
-    </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4 ">
-        <circle-progress         
-            [percent]="20" 
-            [showUnits]="false"
-            [radius]="100"
-            [imageSrc]="'../assets/image/trabajoEquipo.png'"
-            [showImage]="true"
-            [imageHeight]="90"
-            [imageWidth]="90"         
-            [outerStrokeWidth]="16" 
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#78C000'" 
-            [innerStrokeColor]="'#C7E596'" 
-            [animation]="true" 
-            [animationDuration]="300">
-        </circle-progress>
+        <div *ngIf="isLogged">
+            <button class="btn btn-danger" (click)="delete(HardSoftSkills.id)">
+                <i class="bi bi-trash3"></i></button>
+            <button class="btn btn-light" routerLink="/edithardsoftskills/{{HardSoftSkills.id}}">
+                <i class="bi bi-pencil-square"></i></button>
+        </div>
     </div>
 </div>
+
+
+
+<!-- <div class="card">
+    <div class="row ">
+        <h3>Hard & Soft Skills</h3>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-11">
+            <div class="col-lg-2">
+                <button type="button" class="btn btn-primary" routerLink="/nuevohardsoftskills" *ngIf="isLogged">
+                    Nuevo habilidad
+                </button>
+            </div>
+            <br>
+            <div class=" text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let HardSoftSkills of hss">
+
+                <h5>{{HardSoftSkills.nombreHSS}}</h5>
+        
+                <circle-progress 
+                    [percent]=(HardSoftSkills.porcentajeHSS) 
+                    [showUnits]="false" 
+                    [radius]="75" 
+                    [imageSrc]=(HardSoftSkills.imgHSS)
+                    [showImage]="true" 
+                    [imageHeight]="75" 
+                    [imageWidth]="75" 
+                    [outerStrokeWidth]="16" 
+                    [innerStrokeWidth]="8"
+                    [outerStrokeColor]="'#78C000'" 
+                    [innerStrokeColor]="'#C7E596'" 
+                    [animation]="true" 
+                    [animationDuration]="300">
+                </circle-progress>
+                <div *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="delete(HardSoftSkills.id)">
+                        <i class="bi bi-trash3"></i></button>
+                    <button class="btn btn-light" routerLink="/edithardsoftskills/{{HardSoftSkills.id}}">
+                        <i class="bi bi-pencil-square"></i></button>
+                </div>
+            </div>            
+        </div>
+    </div>
+</div> -->
