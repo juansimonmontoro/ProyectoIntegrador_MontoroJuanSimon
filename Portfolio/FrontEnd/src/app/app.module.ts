@@ -7,7 +7,6 @@ import { LogoAPComponent } from './components/logo-ap/logo-ap.component';
 import { AboutComponent } from './components/about/about.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ExperencieComponent } from './components/experencie/experencie.component';
-import { EducationComponent } from './components/education/education.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HardAndSoftSkillsComponent } from './components/hard-and-soft-skills/hard-and-soft-skills.component';
 import { ProjectComponent } from './components/project/project.component';
@@ -19,15 +18,13 @@ import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experencie/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experencie/edit-experiencia.component';
-import { EditEducacionComponent } from './components/education/edit-educacion.component';
-import { NewEducacionComponent } from './components/education/new-educacion.component';
 import { NewProyectoComponent } from './components/project/new-proyecto.component';
 import { EditProyectoComponent } from './components/project/edit-proyecto.component';
 import { EditHardSoftSkillsComponent } from './components/hard-and-soft-skills/edit-hard-soft-skills.component';
 import { NewHardSoftSkillsComponent } from './components/hard-and-soft-skills/new-hard-soft-skills.component';
-
-
-
+import { EducationComponent } from './components/education/education.component';
+import { EditEducationComponent } from './components/education/edit-education.component';
+import { NewEducationComponent } from './components/education/new-education.component';
 
 @NgModule({
   declarations: [
@@ -37,21 +34,21 @@ import { NewHardSoftSkillsComponent } from './components/hard-and-soft-skills/ne
     AboutComponent,
     BannerComponent,
     ExperencieComponent,
-    EducationComponent,
     HardAndSoftSkillsComponent,
     ProjectComponent,
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    EducationComponent,
+    EditEducationComponent,
+    NewEducationComponent,
     NewExperienciaComponent,
     EditExperienciaComponent,
-    EditEducacionComponent,
-    NewEducacionComponent,
     NewProyectoComponent,
     EditProyectoComponent,
     EditHardSoftSkillsComponent,
     NewHardSoftSkillsComponent,
-    
+
   ],
   imports: [
     BrowserModule,
