@@ -28,6 +28,7 @@ import { NewHardSoftSkillsComponent } from './components/hard-and-soft-skills/ne
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
