@@ -11,6 +11,7 @@ export class AboutComponent implements OnInit {
   persona: persona = new persona("","","");
 
   constructor(public personaService: PersonaService) { }
+   isLogged = false;
 
   ngOnInit(): void {
     this.personaService.getPersona().subscribe(data =>{this.persona= data} )
