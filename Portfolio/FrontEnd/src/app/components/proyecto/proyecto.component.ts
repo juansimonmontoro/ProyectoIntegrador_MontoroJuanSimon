@@ -4,11 +4,11 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
-  selector: 'app-project',
-  templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  selector: 'app-proyecto',
+  templateUrl: './proyecto.component.html',
+  styleUrls: ['./proyecto.component.css']
 })
-export class ProjectComponent implements OnInit {  
+export class ProyectoComponent implements OnInit {  
   proy: Proyecto[] = [];
   constructor(private proyectoS: ProyectoService, private tokenService: TokenService) { }
   isLogged = false;

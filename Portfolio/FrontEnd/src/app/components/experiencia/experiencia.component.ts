@@ -4,11 +4,11 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
 
 @Component({
-  selector: 'app-experencie',
-  templateUrl: './experencie.component.html',
-  styleUrls: ['./experencie.component.css']
+  selector: 'app-experiencia',
+  templateUrl: './experiencia.component.html',
+  styleUrls: ['./experiencia.component.css']
 })
-export class ExperencieComponent implements OnInit {
+export class ExperienciaComponent implements OnInit {
   expe: Experiencia[] = []
 
   constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }

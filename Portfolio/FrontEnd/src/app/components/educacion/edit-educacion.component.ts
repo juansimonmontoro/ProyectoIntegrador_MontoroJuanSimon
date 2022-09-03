@@ -5,12 +5,12 @@ import { EducacionService } from 'src/app/service/educacion.service';
 
 
 @Component({
-  selector: 'app-edit-eduction',
-  templateUrl: './edit-education.component.html',
-  styleUrls: ['./edit-education.component.css']
+  selector: 'app-edit-educacion',
+  templateUrl: './edit-educacion.component.html',
+  styleUrls: ['./edit-educacion.component.css']
 })
 
-export class EditEducationComponent implements OnInit {
+export class EditEducacionComponent implements OnInit {
   editedu: Educacion = null;
 
   constructor(
