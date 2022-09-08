@@ -1,54 +1,31 @@
 package com.portfolio.jsm.Dto;
 
 import javax.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
-
+@Getter
+@Setter
 public class dtoProyecto {
-    
+
     @NotBlank
     private String nombreP;
     @NotBlank
-    private String descripcionP;
-    @NotBlank
+    private String descripcionP;    
     private String imgP;
-
-    public dtoProyecto(String nombreP, String descripcionP, String imgP) {
-        this.nombreP = nombreP;
-        this.descripcionP = descripcionP;
-        this.imgP = imgP;
-    }   
+    private String urlP;    
 
     public dtoProyecto() {
     }
-    
-    //Getters & Setters
-    public String getNombreP() {
-        return nombreP;
-    }
 
-    public void setNombreP(String nombreP) {
+    public dtoProyecto(String nombreP, String descripcionP, String imgP, String urlP) {
         this.nombreP = nombreP;
-    }
-
-    public String getDescripcionP() {
-        return descripcionP;
-    }
-
-    public void setDescripcionP(String descripcionP) {
         this.descripcionP = descripcionP;
-    }    
-
-    public String getImgP() {
-        return imgP;
-    }
-
-    public void setImgP(String imgP) {
         this.imgP = imgP;
-    }
+        this.urlP = urlP;
+    }  
     
 
     
 
-    
-    
 }
