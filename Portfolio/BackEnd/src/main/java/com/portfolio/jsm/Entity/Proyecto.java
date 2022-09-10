@@ -22,8 +22,9 @@ public class Proyecto {
 
     //Constructores
     public Proyecto() {
-    }
-
+    }    
+  
+    //no lleva id se auntoincrementa
     public Proyecto(String nombreP, String descripcionP, String imgP, String urlP) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
