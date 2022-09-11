@@ -1,4 +1,5 @@
 package com.portfolio.jsm.Controller;
+
 import com.portfolio.jsm.Dto.dtoHardSoftSkills;
 import com.portfolio.jsm.Entity.HardSoftSkills;
 import com.portfolio.jsm.Security.Controller.Mensaje;
@@ -18,12 +19,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping("/exphss")
 @CrossOrigin(origins = "http://localhost:4200")
 
 public class CHardSoftSkills {
+
     @Autowired
     SHardSoftSkills sHardSoftSkills;
 
@@ -49,7 +50,7 @@ public class CHardSoftSkills {
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
         }
         sHardSoftSkills.delete(id);
-        return new ResponseEntity(new Mensaje("Habilidad eliminado"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Habilidad eliminada"), HttpStatus.OK);
     }
 
     @PostMapping("/create")
@@ -62,12 +63,12 @@ public class CHardSoftSkills {
         }
 
         HardSoftSkills hardSoftSkills = new HardSoftSkills(
-                //dtohardSoftSkills.getNombreHSS(), dtohardSoftSkills.getImgHSS()
-                dtohardSoftSkills.getNombreHSS(), dtohardSoftSkills.getPorcentajeHSS(), dtohardSoftSkills.getImgHSS()
-
+                dtohardSoftSkills.getNombreHSS(),
+                dtohardSoftSkills.getPorcentajeHSS(),
+                dtohardSoftSkills.getImgHSS()
         );
         sHardSoftSkills.save(hardSoftSkills);
-        return new ResponseEntity(new Mensaje("Habilidades agregada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Habilidad agregada"), HttpStatus.OK);
 
     }
 
@@ -87,11 +88,11 @@ public class CHardSoftSkills {
 
         hardSoftSkills.setNombreHSS(dtohardSoftSkills.getNombreHSS());
         hardSoftSkills.setPorcentajeHSS(dtohardSoftSkills.getPorcentajeHSS());
-        //hardSoftSkills.setImgHSS(dtohardSoftSkills.getImgHSS());
+        hardSoftSkills.setImgHSS(dtohardSoftSkills.getImgHSS());
 
         sHardSoftSkills.save(hardSoftSkills);
 
-        return new ResponseEntity(new Mensaje("Habilidades actualizada"), HttpStatus.OK);
+        return new ResponseEntity(new Mensaje("Habilidad actualizada"), HttpStatus.OK);
     }
 
 }

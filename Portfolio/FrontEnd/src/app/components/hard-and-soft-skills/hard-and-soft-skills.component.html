@@ -8,28 +8,28 @@
     </div>
     <br>
     <br>
-    <div class=" text-center col-lg-2 col-sm-4 col-md-4 " *ngFor="let HardSoftSkills of hss">        
+    <div class=" text-center col-sm-4 col-md-4 col-lg-2 " *ngFor="let HardSoftSkills of hss">        
         <circle-progress 
-            [percent]=(HardSoftSkills.porcentajeHSS) 
+            [percent]="(HardSoftSkills.porcentajeHSS)" 
             [showUnits]="false" 
-            [radius]="80" 
-            [imageSrc]=(HardSoftSkills.imgHSS)
+            [radius]="60" 
+            [imageSrc]="(HardSoftSkills.imgHSS)"
             [showImage]="true" 
-            [imageHeight]="80" 
-            [imageWidth]="80" 
+            [imageHeight]="60" 
+            [imageWidth]="60" 
             [outerStrokeWidth]="5" 
             [innerStrokeWidth]="8"
             [outerStrokeColor]="'#78C000'" 
             [innerStrokeColor]="'#C7E596'" 
             [animation]="true" 
-            [animationDuration]="300">
+            [animationDuration]="1000">
         </circle-progress>
-        <p>{{HardSoftSkills.nombreHSS}}</p> 
+        <h6>{{HardSoftSkills.nombreHSS}}</h6> 
         <div *ngIf="isLogged">
-            <button class="btn btn-danger" (click)="delete(HardSoftSkills.id)">
-                <i class="bi bi-trash3"></i></button>
             <button class="btn btn-light" routerLink="/edithardsoftskills/{{HardSoftSkills.id}}">
                 <i class="bi bi-pencil-square"></i></button>
+            <button class="btn btn-danger" (click)="delete(HardSoftSkills.id)">
+                <i class="bi bi-trash3"></i></button>            
         </div>
     </div>
 </div>

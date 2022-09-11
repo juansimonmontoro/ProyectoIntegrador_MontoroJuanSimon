@@ -1,7 +1,11 @@
 package com.portfolio.jsm.Dto;
 
 import javax.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class dtoHardSoftSkills {
 
     @NotBlank
@@ -10,47 +14,15 @@ public class dtoHardSoftSkills {
     private int porcentajeHSS;
     @NotBlank
     private String imgHSS;
-
+    
+    //constructtores
     public dtoHardSoftSkills() {
-    } 
-
-    /*public dtoHardSoftSkills(String nombreHSS, String imgHSS) {
-        this.nombreHSS = nombreHSS;
-        this.imgHSS = imgHSS;
-    } */   
+    }
 
     public dtoHardSoftSkills(String nombreHSS, int porcentajeHSS, String imgHSS) {
         this.nombreHSS = nombreHSS;
         this.porcentajeHSS = porcentajeHSS;
         this.imgHSS = imgHSS;
-    }
+    }   
 
-    
-    
-    //Getters & Setters
-
-    public String getNombreHSS() {
-        return nombreHSS;
-    }
-
-    public void setNombreHSS(String nombreHSS) {
-        this.nombreHSS = nombreHSS;
-    }
-
-    public int getPorcentajeHSS() {
-        return porcentajeHSS;
-    }
-
-    public void setPorcentajeHSS(int porcentajeHSS) {
-        this.porcentajeHSS = porcentajeHSS;
-    }    
-
-    public String getImgHSS() {
-        return imgHSS;
-    }
-
-    public void setImgHSS(String imgHSS) {
-        this.imgHSS = imgHSS;
-    }
-    
 }
