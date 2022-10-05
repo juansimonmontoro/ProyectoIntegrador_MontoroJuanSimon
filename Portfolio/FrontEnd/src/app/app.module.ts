@@ -26,6 +26,7 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 import { NewEducacionComponent } from './components/educacion/new-educacion.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +58,7 @@ import { NewEducacionComponent } from './components/educacion/new-educacion.comp
     FormsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
+      
 
   ],
   providers: [
