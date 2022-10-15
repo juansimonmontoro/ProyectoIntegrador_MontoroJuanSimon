@@ -15,8 +15,8 @@ div {
 }
 
 /* foto perfil */
-@media(min-width: 576px){
-    #fotoperfil{
+@media(min-width: 576px) {
+    #fotoperfil {
         position: absolute;
         width: 15%;
         border-radius: 100%;
@@ -26,8 +26,8 @@ div {
     }
 }
 
-@media(max-width: 575px){
-    #fotoperfil{
+@media(max-width: 575px) {
+    #fotoperfil {
         position: absolute;
         width: 30%;
         border-radius: 100%;
@@ -36,6 +36,20 @@ div {
         top: 230px;
     }
 }
- 
 
+button.btn.btn-primary {
+    margin: 10px;
+}
+
+.m20 {
+    margin-top: 20px !important;
+}
+
+.ml20 {
+    margin-left: 20px !important;
+}
+
+.mr20 {
+    margin-left: 20px !important;
+}
 

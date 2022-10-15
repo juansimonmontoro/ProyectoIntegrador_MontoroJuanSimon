@@ -2,7 +2,6 @@
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <img src={{persona.img}} class="img-fluid" id="fotoperfil">
     </div>
-
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
         <h3>{{persona.nombre}} {{persona.apellido}}</h3>
         <h6>Full Stack Developper jr</h6>
@@ -11,18 +10,13 @@
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
             <h3> About me</h3>
-            <p>Estudiante de Analista Universitario de Sistemas informáticos en la universidad/centro educativo UNC
-                Manuel Belgrano, realizando el trabajo final. Cuento con diferentes cursos autodidactas de programacion.
-                Trabajo en equipo soy dedicado.
-            </p>
+            <p>{{persona.descripcion}}</p>
         </span>
     </div>
-
-<!--     <nav class="navbar" *ngIf="isLogged">
-        <form class="form-inline">         
-            <button type="button" class="btn btn-success" routerLink="/nuevaedu" >
-                Agregar Educacion
-            </button>          
-        </form>
-    </nav> -->
+    <div class="col-lg-2 m20 ml20">
+        <button type="button" class="btn btn-primary" routerLink="/editabout/1" *ngIf="isLogged">
+            Editar persona
+        </button>
+    </div>
 </div>
+

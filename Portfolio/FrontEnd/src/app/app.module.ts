@@ -25,6 +25,7 @@ import { NewHardSoftSkillsComponent } from './components/hard-and-soft-skills/ne
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 import { NewEducacionComponent } from './components/educacion/new-educacion.component';
+import { EditAboutComponent } from './components/about/edit-about.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { NewEducacionComponent } from './components/educacion/new-educacion.comp
     EditProyectoComponent,
     EditHardSoftSkillsComponent,
     NewHardSoftSkillsComponent,
+    EditAboutComponent,
 
   ],
   imports: [
