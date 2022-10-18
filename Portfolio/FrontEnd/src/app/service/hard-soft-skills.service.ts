@@ -8,7 +8,8 @@ import { HardSoftSkills } from '../model/hard-soft-skills';
   providedIn: 'root'
 })
 export class HardSoftSkillsService {
-  URL = 'http://localhost:8080/exphss/';
+  //URL = 'http://localhost:8080/exphss/';
+  URL = 'https://jsmbackend.herokuapp.com/exphss/';
 
   constructor(private httpClient: HttpClient) { }
 

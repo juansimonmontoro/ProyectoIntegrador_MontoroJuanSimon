@@ -19,7 +19,8 @@ import org.apache.commons.lang3.StringUtils;
 
 @RestController
 @RequestMapping("/personas")
-@CrossOrigin(origins = "http://localhost:4200")
+//@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "https://jsmfrontend.web.app")
 public class PersonaController {
 
     @Autowired
